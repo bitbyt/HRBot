@@ -1,19 +1,19 @@
 'use strict';
 
-var TrumpBot = require('../lib/trumpbot');
+var HRBot = require('../lib/hrbot');
 var http = require('http');
 
-var token = process.env.BOT_API_KEY;
-var dbPath = process.env.BOT_DB_PATH;
-var name = process.env.BOT_NAME;
+var token = process.env.HR_BOT_API_KEY;
+var dbPath = process.env.HR_BOT_DB_PATH;
+var name = process.env.HR_BOT_NAME;
 
-var trumpbot = new TrumpBot({
+var hrbot = new HRBot({
     token: token,
     dbPath: dbPath,
     name: name
 });
 
-trumpbot.run();
+hrbot.run();
 
 http.createServer(function (req, res) {
 
@@ -21,4 +21,4 @@ http.createServer(function (req, res) {
 
   res.send('it is running\n');
 
-}).listen(process.env.PORT || 5000);
+}).listen(process.env.PORT || 1234);

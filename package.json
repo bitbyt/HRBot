@@ -1,8 +1,8 @@
 {
-  "name": "trumpbot",
+  "name": "hrbot",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/trumpbot.js",
+  "main": "lib/hrbot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "source ~/.zshrc && nodemon bin/bot.js",
@@ -12,7 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.15.0",
-    "slackbots": "^0.5.3",
-    "sqlite3": "^3.1.6"
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.3",
+    "morgan": "^1.7.0",
+    "slackbots": "^0.5.3"
   }
 }
