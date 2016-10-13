@@ -1,7 +1,13 @@
 'use strict';
 
 var HRBot = require('../lib/hrbot');
-var http = require('http');
+var express = require('../config/express');
+var mongoose = require('../config/mongoose');
+
+// run database before express application object
+
+var db = mongoose();
+var app = express();
 
 var token = process.env.HR_BOT_API_KEY;
 var dbPath = process.env.HR_BOT_DB_PATH;
@@ -15,10 +21,10 @@ var hrbot = new HRBot({
 
 hrbot.run();
 
-http.createServer(function (req, res) {
+app.set('port',(process.env.PORT||1337));
 
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
+app.listen(app.get('port'), function () {
+  console.log('Server running at localhost: ' + app.get('port'));
+});
 
-  res.send('it is running\n');
-
-}).listen(process.env.PORT || 1234);
+module.exports = app;
