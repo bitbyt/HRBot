@@ -4,9 +4,13 @@ var mongoose  = require('mongoose'),
 
 var UserSchema = new mongoose.Schema({
   name: { type: String },
-  slackid: {
+  slack_id: {
     type: String,
     unique: true,
+  },
+  chat_id:{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Chat'
   },
 });
 
