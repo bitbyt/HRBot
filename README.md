@@ -13,6 +13,36 @@ To increase productivity at the sacrifice of actually looking for a job we devis
 
 So this is actually a coding challenge and the criteria to pass is to build a simple slack chat bot.
 
+## Configuration
+
+### Obtain slack bot app token
+
+Follow the instructions on https://api.slack.com/bot-users
+Obtain an app token
+
+### Setup
+
+```
+$ git clone git@github.com:bitbyt/HRBot.git
+
+$ cd hrbot
+
+$ npm i
+
+```
+
+## Starting with Node.js
+
+For mac users, in your terminal, type: HR_BOT_API_KEY=your_slack_api_key node bin/bot.js
+
+## Possible Next Steps
+
+- Use an actual AI like [WIT](https://wit.ai/).
+- NLP NLP NLP.
+- Add tests.
+- ???
+- Profit.
+
 ## Tech Stack
 
 * Node.js
